@@ -11,9 +11,9 @@ import pyrtcm
 
 
 #FILEPATH of private key
-FILEPATH = "C:/Users/alexa/Desktop/Bachelorarbeit/Code/Rover_base_Code/ssh/my_gnss_key"
+FILEPATH = "location of your clients private key" # must be modified
 #Device Username 
-USERNAME = "pi"
+USERNAME = "clients username" #must be modified
 #Port
 PORT = 8022
 #UI Update Rate
@@ -248,3 +248,4 @@ if __name__ == "__main__":
     main_win = MainWindow(rtcm_data_queue, nmea_data_queue, confg_data_queue)
     main_win.show()
     sys.exit(app.exec_())
+
