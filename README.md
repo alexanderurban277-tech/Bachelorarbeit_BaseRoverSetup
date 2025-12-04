@@ -21,6 +21,19 @@ Durch diese Architektur bleibt die Base bewusst schlank und stabil, da sie nur a
 - **SSH Private Key:** Der Pfad zum eigenen privaten SSH-Key muss korrekt angegeben werden.  
 - **Authorized Keys:** Die Datei `authorized_keys` muss erweitert werden und sich im Scope von `Base.py` befinden. Hier wird überprüft, ob ein Client mit einem bestimmten Username (z. B. `xxx`) eine Verbindung herstellen darf.  
   - Dazu muss eine Datei mit Namen: **Username** und dem **öffentlichen Key** des Clients in die Datei `authorized_keys` eingefügt werden.
+
+## Verwendung des Test-User-Interface (zentrale Verteilstelle)
+
+Das Test-User-Interface fungiert als zentrale Verteilstelle: Es empfängt die Daten der Basisstationen, parst sie und trennt sie in **NMEA**, **RTCM** und **CONFIG-Daten** auf.  
+Im Verlauf der Tests sollen diese Daten an die Rover verteilt werden, sodass die Clients die jeweiligen Informationen gezielt nutzen können.
+
+
+- **PORT:** Muss entsprechend der Server-Einstellung angepasst werden.  
+- **FILEPATH:** Pfad zum privaten SSH-Key des Clients.  
+- **Username:** Den Benutzernamen des Geräts anpassen.  
+
+Hinweis: Bisher können nur **CONFIG-Daten** übergeben werden; andere Felder haben derzeit keine Wirkung und dienen vorerst nur zum Testen.  
+Nach dem Start des Programms können einzelne Felder ausgewählt werden, um die gewünschten Daten anzuzeigen.
  
 ## Achtung!  
 Beim Neustart des Programms müssen sowohl Base als auch das Interface/Rover-Programm neu gestartet werden.  
