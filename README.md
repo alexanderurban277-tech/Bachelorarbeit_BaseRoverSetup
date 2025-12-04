@@ -22,7 +22,7 @@ Durch diese Architektur bleibt die Base bewusst schlank und stabil, da sie nur a
 - **Authorized Keys:** Die Datei `authorized_keys` muss erweitert werden und sich im Scope von `Base.py` befinden. Hier wird überprüft, ob ein Client mit einem bestimmten Username (z. B. `xxx`) eine Verbindung herstellen darf.  
   - Dazu muss eine Datei mit Namen: **Username** und dem **öffentlichen Key** des Clients in die Datei `authorized_keys` eingefügt werden.
  
-Achtung!  
+## Achtung!  
 Beim Neustart des Programms müssen sowohl Base als auch das Interface/Rover-Programm neu gestartet werden.  
 Reihenfolge beachten:  
 1. Base-Server schließen  
