@@ -32,8 +32,8 @@ Im Verlauf der Tests sollen diese Daten an die Rover verteilt werden, sodass die
 - **FILEPATH:** Pfad zum privaten SSH-Key des Clients.  
 - **Username:** Den Benutzernamen des Geräts anpassen.  
 
-Hinweis: Bisher können nur **CONFIG-Daten** übergeben werden; andere Felder haben derzeit keine Wirkung und dienen vorerst nur zum Testen.  
-Nach dem Start des Programms können einzelne Felder ausgewählt werden, um die gewünschten Daten anzuzeigen.
+Hinweis: Bisher können nur **CONFIG-Daten** übergeben werden; andere Felder haben derzeit keine Wirkung.  
+Nach dem Start des Programms können die einzelnen Output Felder ausgewählt werden, um die gewünschten Daten anzuzeigen.
  
 ## Achtung!  
 Beim Neustart des Programms müssen sowohl Base als auch das Interface/Rover-Programm neu gestartet werden.  
