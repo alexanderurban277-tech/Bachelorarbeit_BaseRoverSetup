@@ -10,6 +10,7 @@ Die eigentliche Datenverarbeitung findet nicht auf der Base statt. Stattdessen g
 
 Durch diese Architektur bleibt die Base bewusst schlank und stabil, da sie nur als zuverlässiger Daten-Tunnel fungiert, während alle intelligenten Funktionen, Analyseprozesse und Verwaltungsaufgaben zentral im Hub-Programm ausgeführt werden.
 
+
 ## Verwendung von `Base.py`
 
 `Base.py` fungiert als **Basisstation** für das RTK-System.
@@ -20,3 +21,11 @@ Durch diese Architektur bleibt die Base bewusst schlank und stabil, da sie nur a
 - **SSH Private Key:** Der Pfad zum eigenen privaten SSH-Key muss korrekt angegeben werden.  
 - **Authorized Keys:** Die Datei `authorized_keys` muss erweitert werden und sich im Scope von `Base.py` befinden. Hier wird überprüft, ob ein Client mit einem bestimmten Username (z. B. `xxx`) eine Verbindung herstellen darf.  
   - Dazu muss eine Datei mit Namen: **Username** und dem **öffentlichen Key** des Clients in die Datei `authorized_keys` eingefügt werden.
+ 
+Achtung!  
+Beim Neustart des Programms müssen sowohl Base als auch das Interface/Rover-Programm neu gestartet werden.  
+Reihenfolge beachten:  
+1. Base-Server schließen  
+2. Base-Server neu starten  
+3. Erst danach mit dem Client verbinden
+
