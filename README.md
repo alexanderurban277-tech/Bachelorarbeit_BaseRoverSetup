@@ -20,7 +20,7 @@ Durch diese Architektur bleibt die Base bewusst schlank und stabil, da sie nur a
 - **Baudrate:** Muss vom Benutzer entsprechend der verwendeten Hardware eingestellt werden.  
 - **SSH Private Key:** Der Pfad zum eigenen privaten SSH-Key muss korrekt angegeben werden.  
 - **Authorized Keys:** Die Datei `authorized_keys` muss erweitert werden und sich im Scope von `Base.py` befinden. Hier wird überprüft, ob ein Client mit einem bestimmten Username (z. B. `xxx`) eine Verbindung herstellen darf.  
-  - Dazu muss eine Datei mit Namen: **Username** und dem **öffentlichen Key** des Clients in die Datei `authorized_keys` eingefügt werden.
+  - Dazu muss eine Datei mit Namen: **Username** und dem **öffentlichen Key** des Clients in die Datei `authorized_keys` eingefügt werden. (Notiz: Die "pi" datei ist mein Public key)
 
 ## Verwendung des Test-User-Interface (zentrale Verteilstelle)
 
