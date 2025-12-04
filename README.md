@@ -10,6 +10,22 @@ Die eigentliche Datenverarbeitung findet nicht auf der Base statt. Stattdessen g
 
 Durch diese Architektur bleibt die Base bewusst schlank und stabil, da sie nur als zuverlässiger Daten-Tunnel fungiert, während alle intelligenten Funktionen, Analyseprozesse und Verwaltungsaufgaben zentral im Hub-Programm ausgeführt werden.
 
+## Notiz
+Das LC29H-Modul GNSS Modul welches als Base dienen soll, muss im vorhinein muss vorhinein konfiguriert werden, dies sind die Befehle, die ich verwendet habe:
+
+$PQTMRESTOREPAR13 # PQTM-Parameter auf Standard zurücksetzen und Modul resetten
+$PQTMCFGRCVRMODE,W,229 # Receiver auf Base-Modus setzen
+$PQTMSAVEPAR*5A # PQTM-Parameter in Flash speichern
+
+Modul manuell aus- und wieder einschalten
+
+$PAIR432,122 # RTCM3 MSM7-Nachrichten ausgeben
+$PAIR434,124 # RTCM3 Antennenposition (1005) ausgeben
+$PAIR062,0,010F # NMEA GGA-Nachricht aktivieren
+$PQTMCFGSVIN,W,2,0,0,x,y,z3B # Basisposition in XYZ-Koordinaten setzen oder survey in starten 
+$PQTMSAVEPAR*5A # PQTM-Parameter erneut in Flash speichern
+
+
 
 ## Verwendung von `Base.py`
 
